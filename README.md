@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD
 # MiniModel
 Based on gpt-3
 This is a web application for generating text and handling image uploads using OpenAI's GPT-4 model. The application is built with Flask for the backend and uses HTML, CSS, and JavaScript for the frontend.
