@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Image Generation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container-fluid vh-100 d-flex flex-column p-0">
+        <div class="bg-white p-3 d-flex align-items-center">
+            <span class="logo mr-2">🤖</span>
+            <h5 class="mb-0">大模型</h5>
+        </div>
+        <div id="messageList" class="flex-grow-1 p-3 overflow-auto bg-light">
+            <!-- 动态生成的消息列表 -->
+        </div>
+        <form id="inputForm" class="p-3 bg-light">
+            <div class="uploaded-preview" id="uploadedPreview">
+                <!-- 上传的文件预览 -->
+            </div>
+            <div class="input-group">
+                <input type="text" id="textInput" name="textInput" class="form-control custom-input" placeholder="Type your message..." required>
+                <div class="input-group-append">
+                    <button class="btn btn-secondary custom-button" type="button" id="uploadButton"><i class="fas fa-upload"></i></button>
+                    <input type="file" id="imageInput" name="imageInput" style="display:none;">
+                    <button class="btn btn-primary custom-button" type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- 预览模态框 -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="previewModalClose">&times;</span>
+            <img src="" alt="Preview" class="preview-image">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
